@@ -1,5 +1,5 @@
 plugins {
-    id("org.jetbrains.kotlin.js")
+    id("org.jetbrains.kotlin.js") version "1.4.0"
 }
 
 dependencies {
@@ -21,4 +21,10 @@ dependencies {
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.3.9")
 }
 
-kotlin.target.browser { }
+kotlin {
+    js {
+        browser {
+        }
+        binaries.executable()
+    }
+}
