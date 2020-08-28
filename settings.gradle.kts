@@ -5,5 +5,6 @@ val addProject = { name: String ->
     project(":$name").projectDir = java.io.File("modules/$name")
 }
 
-addProject("app")
-addProject("server")
+//addProject("app")
+//addProject("server")
+includeBuild("modules/server")
